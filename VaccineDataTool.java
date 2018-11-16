@@ -27,6 +27,7 @@ public class VaccineDataTool {
     static final String CLASS = "Class";
     static final String LABEL = "label";
     static final String COMMENT = "comment";
+    static final String EQUIVALENT_CLASS = "equivalentClass";
 
     @SuppressWarnings({ "unchecked" })
     public List<Item> readOwl(String owlFile) {
@@ -62,6 +63,19 @@ public class VaccineDataTool {
                                 break;
                             }
                         }
+                    } else if (startElement.getName().getLocalPart().equals(EQUIVALENT_CLASS)) { // equivalentClass element must be skipped
+                        while(true) {
+                            event = eventReader.nextEvent();
+                            if (event.isEndElement()) {
+                                EndElement endElement = event.asEndElement();
+                                if (endElement.getName().getLocalPart().equals(EQUIVALENT_CLASS)) {
+                                    break;
+                                }
+                            }
+                        } 
+                        do {
+                            event = eventReader.nextEvent();
+                        } while (!event.isStartElement());
                     }
 
                     if (item == null)
@@ -107,7 +121,8 @@ public class VaccineDataTool {
     }
 
     static public void main(String[] agrs) throws MalformedURLException {
-        String DOWNLOAD_URL = "http://svn.code.sf.net/p/vaccineontology/code/trunk/src/ontology/VO.owl";
+        String DOWNLOAD_URL = "https://raw.githubusercontent.com/vaccineontology/VO/master/src/VO_merged.owl";
+        // redirected from http://purl.obolibrary.org/obo/vo.owl
         String FILENAME = "VO.owl";
         URL website = new URL(DOWNLOAD_URL);
         try (ReadableByteChannel rbc = Channels.newChannel(website.openStream());

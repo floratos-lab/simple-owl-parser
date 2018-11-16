@@ -1,4 +1,5 @@
 *.class
+.vscode/*
 ncbitaxon.owl
 VO.owl
 cl.owl
