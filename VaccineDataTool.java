@@ -29,7 +29,6 @@ public class VaccineDataTool {
     static final String COMMENT = "comment";
     static final String EQUIVALENT_CLASS = "equivalentClass";
 
-    @SuppressWarnings({ "unchecked" })
     public List<Item> readOwl(String owlFile) {
         List<Item> items = new ArrayList<Item>();
         try {
@@ -64,7 +63,7 @@ public class VaccineDataTool {
                             }
                         }
                     } else if (startElement.getName().getLocalPart().equals(EQUIVALENT_CLASS)) { // equivalentClass element must be skipped
-                        while(true) {
+                        while (true) {
                             event = eventReader.nextEvent();
                             if (event.isEndElement()) {
                                 EndElement endElement = event.asEndElement();
@@ -72,7 +71,7 @@ public class VaccineDataTool {
                                     break;
                                 }
                             }
-                        } 
+                        }
                         do {
                             event = eventReader.nextEvent();
                         } while (!event.isStartElement());
@@ -88,6 +87,12 @@ public class VaccineDataTool {
                         event = eventReader.nextEvent();
                         String label = event.asCharacters().getData();
                         item.setLabel(label);
+                        continue;
+                    }
+                    if (event.asStartElement().getName().getLocalPart().equals("VO_0003099")) {
+                        event = eventReader.nextEvent();
+                        String tradeName = event.asCharacters().getData();
+                        item.setTradeName(tradeName);
                         continue;
                     }
                     if (event.asStartElement().getName().getLocalPart().equals(COMMENT)) {
