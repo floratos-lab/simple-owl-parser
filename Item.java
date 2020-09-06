@@ -1,30 +1,37 @@
 public class Item {
     private String vaccineID;
     private String label;
-    private String productName;
+    private String vaccineProperName;
     private String tradeName;
 
     public String getVaccineID() {
         return vaccineID;
     }
+
     public void setVaccineID(String vaccineID) {
         this.vaccineID = vaccineID;
     }
+
     public String getLabel() {
         return label;
     }
+
     public void setLabel(String label) {
         this.label = label;
     }
-    public String getProductName() {
-        return productName;
+
+    public String getVaccineProperName() {
+        return vaccineProperName;
     }
-    public void setProductName(String productName) {
-        this.productName = productName;
+
+    public void setVaccineProperName(String vaccineProperName) {
+        this.vaccineProperName = vaccineProperName;
     }
+
     public String getTradeName() {
         return tradeName;
     }
+
     public void setTradeName(String tradeName) {
         this.tradeName = tradeName;
     }
@@ -32,8 +39,10 @@ public class Item {
     @Override
     public String toString() {
         String tmp = "[vaccineID=" + vaccineID + ", label=" + label;
-        if(productName!=null) tmp += ", product name=" + productName;
-        if(tradeName!=null) tmp += ", trade name=" + tradeName;
-        return  tmp+"]";
+        if (vaccineProperName != null)
+            tmp += ", vaccine proper name=" + vaccineProperName;
+        if (tradeName != null)
+            tmp += ", trade name=" + tradeName;
+        return tmp + "]";
     }
 }

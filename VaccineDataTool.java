@@ -95,12 +95,15 @@ public class VaccineDataTool {
                         item.setTradeName(tradeName);
                         continue;
                     }
+                    if (event.asStartElement().getName().getLocalPart().equals("VO_0003158")) {
+                        event = eventReader.nextEvent();
+                        String vaccineProperName = event.asCharacters().getData();
+                        item.setVaccineProperName(vaccineProperName);
+                        continue;
+                    }
                     if (event.asStartElement().getName().getLocalPart().equals(COMMENT)) {
                         event = eventReader.nextEvent();
                         String comment = event.asCharacters().getData();
-                        // only 64 Prodct Name and 106 Trade Name
-                        if (comment.startsWith("Product Name: "))
-                            item.setProductName(comment.substring("Product Name: ".length()));
                         if (comment.startsWith("Trade Name: "))
                             item.setTradeName(comment.substring("Trade Name: ".length()));
                         continue;
@@ -141,15 +144,16 @@ public class VaccineDataTool {
         List<Item> list = tool.readOwl(FILENAME);
         System.out.println("total number " + list.size());
         try (PrintWriter pw = new PrintWriter(new FileWriter("simple-vaccine-list.txt"))) {
-            pw.println("name	vaccine_id	product_name	trade_name");
+            pw.println("name	vaccine_id	vaccine_proper_name	trade_name");
             for (Item item : list) {
-                String productName = "";
+                String vaccineProperName = "";
                 String tradeName = "";
-                if (item.getProductName() != null)
-                    productName = item.getProductName();
+                if (item.getVaccineProperName() != null)
+                    vaccineProperName = item.getVaccineProperName();
                 if (item.getTradeName() != null)
                     tradeName = item.getTradeName();
-                pw.print(item.getLabel() + '\t' + item.getVaccineID() + '\t' + productName + '\t' + tradeName + '\n');
+                pw.print(item.getLabel() + '\t' + item.getVaccineID() + '\t' + vaccineProperName + '\t' + tradeName
+                        + '\n');
             }
             pw.close();
         } catch (IOException e) {
