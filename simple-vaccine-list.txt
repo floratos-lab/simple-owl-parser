@@ -1,4 +1,4 @@
-name	vaccine_id	vaccine proper name	trade_name
+name	vaccine_id	vaccine_proper_name	trade_name
 entity	BFO_0000001		
 continuant	BFO_0000002		
 occurrent	BFO_0000003		
@@ -646,6 +646,7 @@ organismal quality	PATO_0001995
 virulence	PATO_0002146		
 protein	PRO_000000001		
 superoxide dismutase [Cu-Zn]	PRO_000015399		
+S protein of SARS-CoV-2 Wuhan strain	PR_P0DTC2		
 nose	UBERON_0000004		
 serous membrane	UBERON_0000042		
 anatomical structure	UBERON_0000061		
@@ -5233,6 +5234,40 @@ vaccine specific interleukin-4 response	VO_0004917
 vaccine specific interleukin-10 response	VO_0004918		
 vaccine specific Th1 immune response indicated by IgG2a  production	VO_0004919		
 vaccine specific Th2 immune response indicated by IgG1  production	VO_0004920		
+human age	VO_0004921		
+child age	VO_0004922		
+adolescence age	VO_0004923		
+adult age	VO_0004924		
+senior age	VO_0004925		
+age range at vaccination	VO_0004926		
+human age range at vaccination	VO_0004927		
+human child age range at vaccination	VO_0004928		
+human adult age range at vaccination	VO_0004929		
+human senior age range at vaccination	VO_0004930		
+human adolescence age range at vaccination	VO_0004931		
+human age 1 to 2 months at vaccination	VO_0004933		
+human age 4 months at vaccination	VO_0004934		
+human age 11 to 12 years at vaccination	VO_0004935		
+human age 4 to 6 years at vaccination	VO_0004936		
+human age 7 to 11 months at vaccination	VO_0004937		
+human age 12 to 23 months at vaccination	VO_0004938		
+human age 2 to 3 years at vaccination	VO_0004939		
+human age 6 months at vaccination	VO_0004940		
+human age 7 to 10 years at vaccination	VO_0004941		
+human age 19 to 26 years at vaccination	VO_0004942		
+human age 27 to 59 years at vaccination	VO_0004943		
+human age within one month at vaccination	VO_0004944		
+Pfizer–BioNTech COVID-19 vaccine	VO_0004987		Comirnaty
+SARS-CoV-2 protein	VO_0004988		
+S protein of SARS-CoV-2	VO_0004989		
+E protein of SARS-CoV-2	VO_0004990		
+COVAXIN	VO_0004991		
+CoVLP	VO_0004992		
+Ad35.CS.01 malaria vaccine	VO_0004993		
+SCB-2019	VO_0004994		
+UB-612	VO_0004995		
+AdCLD-CoV19	VO_0004996		
+AKS-452	VO_0004999		
 pCAGGSP7 DNA vaccine plasmid	VO_0005000		
 pCAGGS/MCS DNA vaccine plasmid	VO_0005001		
 pWRG DNA vaccine plasmid	VO_0005002		
@@ -5312,6 +5347,25 @@ VR1055 DNA vaccine plasmid	VO_0005075
 pRSC DNA vaccine plasmid	VO_0005076		
 pcDNA3.1(Zeo)+ DNA vaccine plasmid	VO_0005077		
 pVF DNA vaccine plasmid	VO_0005078		
+AV-COVID-19	VO_0005079		
+BECOV2	VO_0005081		
+CIGB-66	VO_0005082		
+CIGB-669	VO_0005083		
+COVID-19 inactivated virus vaccine by Shenzhen Kangtai Biological Products	VO_0005084		
+COVID-19 protein subunit vaccine by Sanofi and GSK	VO_0005085		
+DelNS1-2019-nCoV-RBD-OPT1	VO_0005087		
+EpiVacCorona	VO_0005088		
+GLS-5310	VO_0005089		
+IIBR-100	VO_0005090		
+LV-SMENP-DC	VO_0005091		
+Nanocovax	VO_0005092		
+QazCovid-in	VO_0005093		
+RBD-HBsAg VLP	VO_0005094		
+Recombinant SARS-CoV-2 vaccine (Sf9 cell)	VO_0005095		
+S-268019	VO_0005096		
+Soberana	VO_0005097		
+V591	VO_0005098		
+VLA2001	VO_0005099		
 SARS N protein DNA vaccine	VO_0005100		
 SARS N + SARS M DNA vaccine	VO_0005101		
 SARS M protein DNA vaccine	VO_0005102		
@@ -5331,6 +5385,7 @@ SARS Ad S/N vaccine	VO_0005115
 Ad5.MERS-S1 vaccine	VO_0005116		
 Ad5.MERS-S vaccine	VO_0005117		
 MERS England1 S1 protein subunit Vaccine	VO_0005118		
+MERS England1 S DNA + England1 S protein subunit vaccine	VO_0005119		
 MERS England1 S DNA Vaccine	VO_0005120		
 MERS rRBD plus alum vaccine	VO_0005121		
 MERS-CoV pcDNA3.1-S1 DNA vaccine	VO_0005122		
@@ -5352,10 +5407,10 @@ MVA-MERS vaccine	VO_0005137
 CRT-N SARS vaccine	VO_0005138		
 rSARS-CoV-ΔE vaccine	VO_0005139		
 MVvac2-MERS-solS vaccine	VO_0005140		
-PiCoVacc vaccine	VO_0005141		
-RBD-CuMVTT vaccine	VO_0005142		
-LPN-SARS-Cov-2 vaccine	VO_0005143		
-Ad5-nCoV vaccine	VO_0005144		
+CoronaVac	VO_0005141		
+RBD-CuMVTT	VO_0005142		
+LNP-nCoVsaRNA	VO_0005143		
+Ad5-nCoV	VO_0005144		
 MERS GLS-5300 vaccine	VO_0005145		
 VRC-SRSDNA015-00-VP vaccine	VO_0005146		
 SARS NDV-BC/S vaccine	VO_0005147		
@@ -5364,7 +5419,54 @@ rDNA-expressed S SARS protein vaccine	VO_0005149
 rMV-S + rMV-N vaccine	VO_0005150		
 SARS-CoV Baculovirus  S protein  Vaccine	VO_0005151		
 MVA-MERS-S vaccine	VO_0005152		
+AdCOVID	VO_0005153		
 SARS-CoV pCI-N DNA vaccine	VO_0005154		
+NVX-CoV2373	VO_0005155		
+COVAC1	VO_0005156		
+Moderna COVID-19 vaccine	VO_0005157		
+Oxford–AstraZeneca COVID-19 vaccine	VO_0005158		Covishield
+Ad26.COV2.S	VO_0005159		
+COVID-19 inactivated virus vaccine by Wuhan Institute of Biological Products	VO_0005160		
+ARCoV	VO_0005161		
+ZyCoV-D	VO_0005162		
+ARCT-021	VO_0005164		
+AG0301-COVID19	VO_0005165		
+BBIBP-CorV	VO_0005166		
+COVID-19 inactivated virus vaccine by Chinese Academy of Medical Sciences	VO_0005167		
+CVnCoV	VO_0005168		
+GRAd-COV2	VO_0005169		
+GX-19	VO_0005170		
+KBP-COVID-19	VO_0005171		
+INO-4800	VO_0005172		
+AdimrSC-2f	VO_0005173		
+bacTRL-Spike	VO_0005174		
+ChulaCov19	VO_0005175		
+COH04S1	VO_0005176		
+gorilla adenovirus vector	VO_0005177		
+adenovirus serotype 26 vaccine vector	VO_0005178		
+lipid nanoparticle vector	VO_0005179		
+nanoparticle vector	VO_0005180		
+chimpanzee adenovirus Oxford1 vaccine vector	VO_0005181		
+chimpanzee adenovirus Oxford2 vaccine vector	VO_0005182		
+CORVax12	VO_0005183		
+COVID-19 aAPC vaccine	VO_0005184		
+COVID-19 RNA vaccine by Shulan Hospital	VO_0005185		
+Covigenix VAX-001	VO_0005186		
+COVI-VAC	VO_0005187		
+ERUCOV-VAC	VO_0005188		
+hAd5-COVID-19	VO_0005189		
+IMP CoVac-1	VO_0005190		
+MVA-SARS-2-S	VO_0005191		
+MVC-COV1901	VO_0005192		
+Recombinant spike protein with Advax™ adjuvant	VO_0005193		
+TMV-083	VO_0005194		
+V590	VO_0005195		
+VXA-CoV2-1	VO_0005196		
+authorized COVID-19 vaccine	VO_0005197		http://www.violinet.org/cov19vaxkb/authorizedcov19vax.php
+COVID-19 mRNA vaccine	VO_0005198		
+COVID-19 recombinant viral vector vaccine	VO_0005199		
+COVID-19 recombinant adenoviral vector vaccine	VO_0005200		
+killed inactivated COVID-19 vaccine	VO_0005201		
 country	VO_0010632		
 USA	VO_0010633		
 Rubella virus vaccine	VO_0010637		
@@ -5981,7 +6083,7 @@ M protein	VO_0011316
 SpaP	VO_0011317		
 RVFVsMgp1 M protein	VO_0011318		
 RVFVsSgp2 N protein	VO_0011319		
-S protein	VO_0011320		
+S protein of SARS-CoV	VO_0011320		
 LcrV	VO_0011321		
 GEh29	VO_0011322		
 Gal/GalNAc lectin	VO_0011323		
