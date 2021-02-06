@@ -166,7 +166,7 @@ public class CellSubsetDataTool {
     static public void main(String[] agrs) throws MalformedURLException {
         String DOWNLOAD_URL = "https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl.owl";
         String FILENAME = "cl.owl";
-        /*
+        
         URL website = new URL(DOWNLOAD_URL);
         try (ReadableByteChannel rbc = Channels.newChannel(website.openStream());
                 FileOutputStream fos = new FileOutputStream(FILENAME)) {
@@ -174,7 +174,7 @@ public class CellSubsetDataTool {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        */
+        
 
         CellSubsetDataTool tool = new CellSubsetDataTool();
         List<CellSubet> list = tool.readOwl(FILENAME);
