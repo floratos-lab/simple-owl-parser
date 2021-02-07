@@ -185,10 +185,10 @@ public class PathogenDataTool {
     }
 
     static public void main(String[] agrs) throws MalformedURLException {
-        String DOWNLOAD_URL = "http://purl.obolibrary.org/obo/ncbitaxon.owl";
+        String DOWNLOAD_URL = "https://github.com/obophenotype/ncbitaxon/releases/download/current/ncbitaxon.owl";
         String FILENAME = "ncbitaxon.owl";
 
-        /*
+        
         URL website = new URL(DOWNLOAD_URL);
         try (ReadableByteChannel rbc = Channels.newChannel(website.openStream());
                 FileOutputStream fos = new FileOutputStream(FILENAME)) {
@@ -196,7 +196,7 @@ public class PathogenDataTool {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        */
+        
 
         PathogenDataTool tool = new PathogenDataTool();
         //tool.testReadOwl(FILENAME);
